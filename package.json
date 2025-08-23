@@ -25,6 +25,7 @@
     "eslint-config-next": "15.5.0",
     "husky": "^9.1.7",
     "prettier": "^3.6.0",
-    "tailwindcss": "^4","typescript": "^5"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
