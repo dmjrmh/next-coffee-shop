@@ -9,7 +9,7 @@ function StoreRow({ store }: { store: Store }) {
       <div className="flex flex-col gap-[8px]">
         <h3 className="text-[#77675d] text-xl font-semibold">{store.name}</h3>
         <p className="text-sm text-[#000000]">{store.address}</p>
-        <div className='text-sm text-[#000000]'>{store.openHour}</div>
+        <div className="text-sm text-[#000000]">{store.openHour}</div>
       </div>
       <div className="text-sm text-[#000000]">{store.distanceKm}km</div>
     </div>
