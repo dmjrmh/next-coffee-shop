@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import STORES, { Store } from '../../constants/storeLocation'
+import { locationConstant } from '../../constants/text'
 
 function StoreRow({ store }: { store: Store }) {
   return (
@@ -11,7 +12,7 @@ function StoreRow({ store }: { store: Store }) {
         <p className="text-sm text-[#000000]">{store.address}</p>
         <div className="text-sm text-[#000000]">{store.openHour}</div>
       </div>
-      <div className="text-sm text-[#000000]">{store.distanceKm}km</div>
+      <div className="text-sm text-[#000000]">{store.distanceKm}{locationConstant.DISTANCE_UNIT}</div>
     </div>
   )
 }
@@ -55,10 +56,10 @@ export default function Location() {
   return (
     <div className="w-full max-w-6xl mx-auto grid grid-cols-3 gap-8 p-6">
       <div className="col-span-1">
-        <h2 className="text-3xl font-bold mb-4">Store Locator</h2>
+        <h2 className="text-3xl font-bold mb-4">{locationConstant.TITLE}</h2>
         <div className="mb-4">
           <input
-            placeholder="Click here to search"
+            placeholder={locationConstant.SEARCH_PLACEHOLDER}
             value={query}
             onChange={e => setQuery(e.target.value)}
             className="w-full box-border h-12 p-3 rounded border border-[#444] bg-[transparent] text-black placeholder:text-gray-500 appearance-none focus:outline-none focus:ring-0"
@@ -66,7 +67,7 @@ export default function Location() {
         </div>
 
         <div className="mb-4">
-          <h4 className="text-lg font-semibold mb-2">Shows stores with ...</h4>
+          <h4 className="text-lg font-semibold mb-2">{locationConstant.SHOWS_WITH}</h4>
           <div className="flex flex-col gap-2">
             {features.map(feature => (
               <label key={feature} className="flex items-center gap-2 text-sm">
@@ -85,7 +86,7 @@ export default function Location() {
       <section className="col-span-2">
         <div className="flex flex-col">
           {filteredStores.length === 0 && (
-            <div className="text-gray-400">No stores found</div>
+            <div className="text-gray-400">{locationConstant.NO_STORES}</div>
           )}
           {filteredStores.map(store => (
             <StoreRow key={store.id} store={store} />
