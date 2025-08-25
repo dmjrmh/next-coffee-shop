@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import STORES, { Store } from '../../constants/storeLocation'
+import STORES, { Store } from '../../constants/dummyData/storeLocation'
 import { locationConstant } from '../../constants/text'
 
 function StoreRow({ store }: { store: Store }) {
