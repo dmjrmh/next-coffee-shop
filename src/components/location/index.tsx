@@ -12,7 +12,10 @@ function StoreRow({ store }: { store: Store }) {
         <p className="text-sm text-[#000000]">{store.address}</p>
         <div className="text-sm text-[#000000]">{store.openHour}</div>
       </div>
-      <div className="text-sm text-[#000000]">{store.distanceKm}{locationConstant.DISTANCE_UNIT}</div>
+      <div className="text-sm text-[#000000]">
+        {store.distanceKm}
+        {locationConstant.DISTANCE_UNIT}
+      </div>
     </div>
   )
 }
@@ -67,7 +70,9 @@ export default function Location() {
         </div>
 
         <div className="mb-4">
-          <h4 className="text-lg font-semibold mb-2">{locationConstant.SHOWS_WITH}</h4>
+          <h4 className="text-lg font-semibold mb-2">
+            {locationConstant.SHOWS_WITH}
+          </h4>
           <div className="flex flex-col gap-2">
             {features.map(feature => (
               <label key={feature} className="flex items-center gap-2 text-sm">
