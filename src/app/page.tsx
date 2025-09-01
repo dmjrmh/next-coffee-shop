@@ -1,8 +1,5 @@
-import Navbar from "@/components/menu/Navbar"
-
+import Navbar from '@/components/menu/Navbar'
 
 export default function Home() {
-  return ( 
-    <Navbar/>
-  )
+  return <Navbar />
 }
