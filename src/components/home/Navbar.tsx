@@ -22,14 +22,14 @@ export default function Navbar() {
     { href: '/', label: navbarConstant.HOME, match: (p: string) => p === '/' },
     { href: '/menu', label: navbarConstant.MENU, match: (p: string) => p.startsWith('/menu') },
     { href: '/rewards', label: navbarConstant.REWARDS, match: (p: string) => p.startsWith('/rewards') },
-    { href: '/stores', label: navbarConstant.STORE_LOCATOR, match: (p: string) => p.startsWith('/stores') },
+    { href: '/location', label: navbarConstant.STORE_LOCATOR, match: (p: string) => p.startsWith('/location') },
   ]), [])
 
   const baseLink = "text-lg font-medium rounded-md py-2 px-4 transition focus:outline-none focus:ring-2 focus:ring-starbuck/20"
 
-  const activeLink = "bg-starbuck text-white/90"
+  const activeLink = "bg-starbuck text-[#000000]"
 
-  const inactiveLink = "text-black hover:text-white/90 hover:bg-starbuck"
+  const inactiveLink = "text-black hover:text-[#000000] font-bold hover:bg-starbuck"
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-200/60 bg-[#fefbf4] backdrop-blur supports-[backdrop-filter]:bg-[#fefbf4]/65 py-4">
@@ -65,11 +65,11 @@ export default function Navbar() {
               </Link>
             )
           })}
-          <Link
+          {/* <Link
             href="/order"
             className="inline-flex items-center rounded-md border border-neutral-900 bg-starbuck px-4 py-2 text-sm font-semibold text-white/90 transition hover:opacity-90 hover:bg-white/90 hover:text-starbuck hover:border-starbuck">
             {navbarConstant.ORDER_NOW}
-          </Link>
+          </Link> */}
         </nav>
         {/* Mobile Hamburger */}
         <button

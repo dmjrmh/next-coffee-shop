@@ -101,4 +101,4 @@ export default function Location() {
     </div>
   )
 }
-// component implemented above (export default Location)
+

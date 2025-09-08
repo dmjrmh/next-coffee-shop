@@ -11,6 +11,6 @@ export const navbarConstant = {
   HOME: 'Home',
   MENU: 'Menu',
   REWARDS: 'Rewards',
-  STORE_LOCATOR: 'Store Locator',
+  STORE_LOCATOR: 'Store Location',
   ORDER_NOW: 'Order Now',
 }
