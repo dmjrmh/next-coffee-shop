@@ -18,18 +18,39 @@ export default function Navbar() {
     }
   }, [open])
 
-  const navItems = useMemo(() => ([
-    { href: '/', label: navbarConstant.HOME, match: (p: string) => p === '/' },
-    { href: '/menu', label: navbarConstant.MENU, match: (p: string) => p.startsWith('/menu') },
-    { href: '/rewards', label: navbarConstant.REWARDS, match: (p: string) => p.startsWith('/rewards') },
-    { href: '/location', label: navbarConstant.STORE_LOCATOR, match: (p: string) => p.startsWith('/location') },
-  ]), [])
+  const navItems = useMemo(
+    () => [
+      {
+        href: '/',
+        label: navbarConstant.HOME,
+        match: (p: string) => p === '/',
+      },
+      {
+        href: '/menu',
+        label: navbarConstant.MENU,
+        match: (p: string) => p.startsWith('/menu'),
+      },
+      {
+        href: '/rewards',
+        label: navbarConstant.REWARDS,
+        match: (p: string) => p.startsWith('/rewards'),
+      },
+      {
+        href: '/location',
+        label: navbarConstant.STORE_LOCATOR,
+        match: (p: string) => p.startsWith('/location'),
+      },
+    ],
+    []
+  )
 
-  const baseLink = "text-lg font-medium rounded-md py-2 px-4 transition focus:outline-none focus:ring-2 focus:ring-starbuck/20"
+  const baseLink =
+    'text-lg font-medium rounded-md py-2 px-4 transition focus:outline-none focus:ring-2 focus:ring-starbuck/20'
 
-  const activeLink = "bg-starbuck text-[#000000]"
+  const activeLink = 'bg-starbuck text-[#000000]'
 
-  const inactiveLink = "text-black hover:text-[#000000] font-bold hover:bg-starbuck"
+  const inactiveLink =
+    'text-black hover:text-[#000000] font-bold hover:bg-starbuck'
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-200/60 bg-[#fefbf4] backdrop-blur supports-[backdrop-filter]:bg-[#fefbf4]/65 py-4">
@@ -144,8 +165,7 @@ export default function Navbar() {
                       href={item.href}
                       onClick={() => setOpen(false)}
                       aria-current={isActive ? 'page' : undefined}
-                      className={`rounded-lg px-4 py-2 text-base font-medium transition ${isActive ? 'bg-starbuck text-white/90' : 'text-starbuck hover:text-white/90 hover:bg-starbuck'}`}
-                    >
+                      className={`rounded-lg px-4 py-2 text-base font-medium transition ${isActive ? 'bg-starbuck text-white/90' : 'text-starbuck hover:text-white/90 hover:bg-starbuck'}`}>
                       {item.label}
                     </Link>
                   )

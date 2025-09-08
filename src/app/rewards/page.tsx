@@ -1,3 +1,1 @@
-export default function RewardsPage() {
-  
-};
+export default function RewardsPage() {}
