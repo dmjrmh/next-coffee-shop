@@ -1,3 +1,1 @@
-export default function MenuPage() {
-  
-};
+export default function MenuPage() {}
