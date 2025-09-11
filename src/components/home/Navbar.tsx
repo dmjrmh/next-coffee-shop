@@ -47,10 +47,10 @@ export default function Navbar() {
   const baseLink =
     'text-lg font-medium rounded-md py-2 px-4 transition focus:outline-none focus:ring-2 focus:ring-starbuck/20'
 
-  const activeLink = 'bg-starbuck text-[#000000]'
+  const activeLink = 'bg-starbuck text-[#fefbf4]'
 
   const inactiveLink =
-    'text-black hover:text-[#000000] font-bold hover:bg-starbuck'
+    'text-black hover:text-[#fefbf4] font-bold hover:bg-starbuck'
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-neutral-200/60 bg-[#fefbf4] backdrop-blur supports-[backdrop-filter]:bg-[#fefbf4]/65 py-4">
