@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { heroConstant } from "@/constants/text"
 
 export default function HeroSection() {
   return (
@@ -20,9 +21,9 @@ export default function HeroSection() {
         <div className="pointer-events-none absolute inset-0 flex items-center">
           <div className="pointer-events-auto px-6 sm:px-10 md:px-14">
             <h1 className="max-w-xl text-4xl font-semibold leading-tight text-white sm:text-5xl">
-              <span className="block">Brewed</span>
-              <span className="block">for Your</span>
-              <span className="block">Moments.</span>
+              <span className="block">{heroConstant.LINEONE}</span>
+              <span className="block">{heroConstant.LINETWO}</span>
+              <span className="block">{heroConstant.LINETHREE}</span>
             </h1>
 
             <Link href="/menu" className="mt-6 inline-flex items-center rounded-lg bg-starbuck px-4 py-2 text-sm font-medium text-white shadow hover:opacity-90 focus:outline-none focus-visible:ring">
