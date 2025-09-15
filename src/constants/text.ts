@@ -14,3 +14,20 @@ export const navbarConstant = {
   STORE_LOCATOR: 'Store Location',
   ORDER_NOW: 'Order Now',
 }
+
+export const footerConstant = {
+  TITLE: 'Quick Links',
+  HOME: 'Home',
+  MENU: 'Menu',
+  STORE_LOCATOR: 'Store Location',
+  REWARDS: 'Rewards',
+  TEL: '123-456-7890',
+  EMAIL: 'info@coffeeshop.com',
+  LOCATION: 'Meikarta, ID',
+}
+
+export const heroConstant = { 
+  LINEONE: 'Brewed',
+  LINETWO: 'for Your',
+  LINETHREE: 'Moments',
+}
